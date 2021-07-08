@@ -1,0 +1,288 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    width: 100%;
+    height: 450px;
+    text-align: center;
+    background-image: url(../img/header-opaco.jpg);
+    background-size: cover;
+    padding-top: 110px;
+}
+
+.header h1 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 20px
+}
+
+.header p {
+    font-size: 18px;
+    line-height: 25px;
+    color: white;
+    padding: 0 75px;
+}
+
+.header button {
+    width: 170px;
+    height: 60px;
+    margin-top: 25px;
+    color: white;
+    background-color: #1d1d1dce;
+}
+
+.header button:hover {
+    color: black;
+    background-color: #969696ce;
+}
+
+.descriçao {
+    padding: 35px 0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: #EAEAEA;
+}
+
+.descriçao h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 10px;
+}
+
+.descriçao p {
+    font-size: 14;
+    color: #333333;
+    line-height: 25px;
+    padding: 20px;
+}
+
+.atuaçao {
+    padding: 40px 0;
+    background-color: #333333;
+}
+
+.img-1, .img-2, .img-3 {
+    background-color: white;
+}
+.atuaçao img {
+    display: block;
+    width: cover;
+    height: 200px;
+}
+
+.atuaçao h2 {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    padding: 40px 0;
+    color: #333333;
+}
+
+.atuaçao p {
+    font-size: 1.1em;
+    text-align: center;
+    line-height: 1.5em;
+    color: #333333;
+    padding: 0px 15px 40px 15px;
+}
+
+.quebra {
+    padding: 35px 0;
+    width: 100%;
+    height: 200px;
+    text-align: center;
+    background-color: white;
+}
+
+.quebra h2 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #333333;
+    padding-bottom: 10px;
+}
+
+.quebra p {
+    font-size: 14;
+    color: #333333;
+    line-height: 25px;
+    padding: 20px;
+}
+
+.info {
+    background-color: #000000;
+    color: white;
+}
+
+.contato {
+    float: left;
+    background-color: #2690D4;
+    width: 50%;
+    height: 300px;
+}
+
+.sobre {
+    float: right;
+    background-color: #333333;
+    width: 50%;
+    height: 300px;
+}
+
+.contato h2, .sobre h2 {
+    font-size: 25px;
+    font-weight: bold;
+    text-align: center;
+    padding: 60px 0 35px 0;
+}
+
+.contato p, .sobre p {
+    font-size: 17px;
+    text-align: center;
+    padding: 20px 40px;
+    line-height: 1.5em;
+}
+
+.footer {
+    clear: left;
+    height: 85px;
+    color: white;
+    background-color: black;
+}
+
+.footer p {
+    color: white;
+    font-size: 17px;
+    margin-top: 35px;
+}
+
+.footer a {
+    color: #2690D4;
+}
+
+
+@media only screen and (min-width: 788px) and (max-width: 979px) {
+    .atuaçao img {
+        display: block;
+        width: 236px;
+        height: 200px;
+    }
+}
+
+
+@media only screen and (max-width: 787px) {
+    .header {
+        padding-top: 10px;
+    }
+
+    .header p {
+        font-size: 14px;
+    }
+
+    .descriçao {
+        padding: 20px 0;
+    }
+
+    .descriçao h2 {
+        font-size: 20px;
+        padding: 0 0;
+    }
+
+    .descriçao p {
+        font-size: 14px;
+    } 
+
+    .quebra {
+        padding: 20px 0;
+        width: 100%;
+    }
+    
+    .quebra h2 {
+        font-size: 20px;
+        padding: 0 0;
+    }
+
+    .quebra p {
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+    
+    
+    .contato h2, .sobre h2 {
+        font-size: 20px;
+        padding: 20px 0 5px 0;
+    }
+    
+    .contato p, .sobre p {
+        font-size: 14px;
+        padding: 20px 10px;
+    }
+
+    .footer {
+        height: 150px;
+    }
+    
+    .footer p {
+        font-size: 14px;
+    }
+    
+}
+
+/*Javascript*/
+
+/* [atributo] -> forma de selecionar atributo */
+
+.js [data-slide] {
+    position: relative;
+  }
+  .js [data-slide] > * {
+    position: absolute;
+    top: 0px;
+    opacity: 0;
+  }
+  .js [data-slide] > .active {
+    position: relative;
+    opacity: 1;
+    transition: opacity 500ms;
+    z-index: 1;
+  }
+
+  .js [data-slide-nav] {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.js [data-slide-nav] button {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 4px;
+    border: none;
+    padding: 0px;
+    border-radius: 6px;
+    text-indent: -99px;
+    overflow: hidden;
+    background-color: #1d1d1d;
+}
+
+.js [data-slide-nav] button.active {
+    background-color: #fec63e;
+}
+
+.js [data-anime] {
+    opacity: 0;
+}
+
+.js .fadeInDown {
+    transform: translate3d(0, -20px, 0);   
+}
+
+.js .anime {
+    opacity: 1;
+    transform: none;
+    transition: opacity 800ms, transform 800ms;
+}
