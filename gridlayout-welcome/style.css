@@ -16,14 +16,14 @@ a {
 }
 
 img {
-    max-width: 100%;
+    width: 100%;
     display: block;
     border-radius: 5px;
 }
 
 .estrutura {
     display: grid;
-    grid-template-rows: auto 1fr 300px auto;
+    grid-template-rows: auto 1fr auto auto;
     grid-template-areas: 
     "header header header"
     "content content content"
@@ -33,24 +33,29 @@ img {
 
 .header {
     grid-area: header;
-    display: grid;
-    grid-template-columns: 1fr 3fr auto;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
     align-items: flex-end;
+    justify-content: space-between;
 }
 
 .logo {
     width: 80px;
-    margin: 30px 0px 30px 50px;
+    margin: 30px 50px 30px 50px;
     background: white;
 }
 
 .header ul {
     display: flex;
     flex-wrap: wrap;
+    flex-direction: row;
 }
 
 .header li {
-    margin: auto 30px 30px 0px;
+    width: 100px;
+    margin: 30px 0px;
+    
 }
 
 .header li a {
@@ -71,10 +76,27 @@ img {
     border: 1px solid transparent;
 }
 
+ @media (max-width: 760px) {
+    .header {
+        /* background-color: violet; */
+    }
 
+    .header ul {
+        display: flex;
+        flex-wrap: wrap;
+
+    }
+
+    .header li {
+        min-width: 260px;
+        margin: 10px auto;
+    }
+    .header li:last-child {
+        padding-bottom: 20px;
+    }
+ }
 
 .btn {
-    margin: 0 50px 30px 0;
     width: 150px;
     height: 50px;
     font-size: 17px;
@@ -85,13 +107,15 @@ img {
     transition: all .2s ease-in-out;
 }
 
-.header button:hover {
-    width: 160px;
-    height: 60px;
-    margin: 0 45px 25px 0;
-    letter-spacing: 1px;
+.header .btn {
+    margin: 0 30px 30px 50px;
 }
 
+
+.btn:hover {
+    letter-spacing: .5px;
+    color: #FBD01C;
+}
 
 .content {
     grid-area: content;
@@ -99,6 +123,12 @@ img {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+@media (max-width: 760px) {
+    .content {
+        margin: 0px 50px;
+    }
 }
 
 .content h1 {
@@ -116,34 +146,37 @@ img {
 }
 
 .content img {
-    max-width: 600px;
+    max-width: 500px;
 }
+
+/* @media (max-width: 760px) {
+    .content img {
+        width: 60%
+    }
+} */
 
 .info {
-    max-width: 550px;
-}
-
-.info button {
-    margin-left: 350px;
-}
-
-.info button:hover {
-    width: 160px;
-    height: 60px;
-    letter-spacing: 1px;
+    max-width: 650px;
 }
 
 
-.anuncios {
+
+.anuncios-container {
     grid-area: anuncios;
     background: linear-gradient(135deg, #FF2B5C, #665C78);
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    align-items: center;
-    justify-items: center;
+    padding: 0 50px;
+    flex-wrap: wrap;
 }
 
+.anuncios {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
 
+.anuncios a {
+    margin: 30px auto;
+}
 
 .footer {
     grid-area: footer;
@@ -165,3 +198,4 @@ img {
     align-self: center;
     justify-self: right;
 }
+
